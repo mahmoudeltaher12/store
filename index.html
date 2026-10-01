@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f8f3" />
+  <meta name="description" content="RASI — اختيارات يومية بلمسة مختلفة." />
+  <title>RASI | لبس يعبر عنك</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">توصيل مجاني للطلبات فوق ١٥٠٠ جنيه <a href="#shop">اكتشفي الجديد ←</a></div>
+  <header class="header">
+    <button class="menu-button" id="menu-toggle" aria-label="القائمة">☰</button>
+    <a class="logo" href="#home" data-page="home">RASI<span>.</span></a>
+    <nav id="nav"><a href="#shop" data-scroll="shop">تسوقي</a><a href="#new" data-scroll="new">وصل حديثًا</a><a href="#story" data-scroll="story">حكاية RASI</a></nav>
+    <div class="actions"><button id="search-toggle">بحث</button><button data-page="login">حسابي</button><button id="cart-open">السلة <b id="cart-count">0</b></button></div>
+    <form id="search-form" hidden><input id="search" placeholder="بتدوري على إيه؟" aria-label="ابحثي عن منتج"><button>بحث</button></form>
+  </header>
+  <main>
+    <section class="page" id="home-page">
+      <section class="hero"><div class="hero-copy"><p class="eyebrow">مجموعة خريف ٢٠٢٦</p><h1>لبس يعبر<br>عن <em>حقيقتك.</em></h1><p class="hero-lede">قطع سهلة، تفاصيل مدروسة، ومساحة أكبر إنك تكوني على طبيعتك.</p><a class="button dark" href="#shop" data-scroll="shop">تسوقي المجموعة ←</a><p class="hero-aside">اختياراتك اليومية، بس على طريقتك</p></div><div class="hero-photo"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85" alt="إطلالة عصرية من مجموعة RASI"><span class="stamp">NEW<br><strong>٢٦</strong><br>COLLECTION</span></div></section>
+      <section class="categories" aria-label="فئات المنتجات"><button data-category="الكل"><small>٠١</small>كل القطع <span>↗</span></button><button data-category="ملابس"><small>٠٢</small>ملابس <span>↗</span></button><button data-category="إكسسوارات"><small>٠٣</small>إكسسوارات <span>↗</span></button><button data-category="الأكثر مبيعًا"><small>٠٤</small>الأكثر مبيعًا <span>↗</span></button></section>
+      <section class="shop" id="shop"><div class="section-heading" id="new"><div><p class="eyebrow">اختيارات الموسم</p><h2>قطع هتلبسيها <em>كتير.</em></h2></div><span>تسوقي على مزاجك</span></div><div class="filters"><div><button class="filter active" data-category="الكل">الكل</button><button class="filter" data-category="ملابس">ملابس</button><button class="filter" data-category="إكسسوارات">إكسسوارات</button><button class="filter" data-category="الأكثر مبيعًا">الأكثر مبيعًا</button></div><label>ترتيب <select id="sort"><option value="featured">المميز</option><option value="low">السعر: الأقل</option><option value="high">السعر: الأعلى</option></select></label></div><div class="products" id="products"></div><p class="empty" id="empty" hidden>مفيش منتجات مطابقة. جربي كلمة تانية.</p></section>
+      <section class="story" id="story"><small>R/01</small><div><p class="eyebrow">مش لازم تختاري بين الراحة والشكل</p><h2>خلي اللبس<br>يبقى <em>شبهك.</em></h2></div><p>RASI بدأت من فكرة بسيطة: قطع معمولة للحياة الحقيقية. خامات مريحة، قصّات تعيش معاكي، وتفاصيل تفرق من غير ما تتكلم بصوت عالي.</p><a href="#shop" data-scroll="shop" aria-label="تسوقي المنتجات">↗</a></section>
+    </section>
+    <section class="page login-page" id="login-page" hidden><div class="login-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85" alt="إطلالة من RASI"></div><div class="login-box"><a href="#home" data-page="home">← رجوع للمتجر</a><p class="eyebrow">أهلاً بيكي تاني</p><h1>حسابك، <em>على راحتك.</em></h1><p>سجلي دخولك عشان تتابعي طلباتك وتحفظي اختياراتك.</p><form id="login-form"><label for="email">البريد الإلكتروني</label><input id="email" type="email" autocomplete="email" required><label for="password">كلمة المرور</label><input id="password" type="password" minlength="4" autocomplete="current-password" required><button class="button dark">تسجيل الدخول ←</button></form><button class="admin-demo" id="demo-admin">دخول الإدارة التجريبي</button></div></section>
+    <section class="page admin-page" id="admin-page" hidden><aside class="admin-side"><a class="logo" href="#home" data-page="home">RASI<span>.</span></a><p>مساحة الإدارة</p><button class="admin-tab active" data-tab="overview">نظرة عامة</button><button class="admin-tab" data-tab="products">المنتجات</button><button class="admin-tab" data-tab="orders">الطلبات</button><button class="admin-tab" data-tab="messages">رسائل العملاء</button><button id="logout">تسجيل الخروج</button></aside><div class="admin-main"><header><div><p class="eyebrow">مساحة الإدارة</p><h1>أهلاً بيكي، <em>RASI.</em></h1></div><button class="button outline" data-page="home">عرض المتجر ↗</button></header><div id="admin-content"></div><p class="demo-note">وضع تجريبي: البيانات محفوظة على هذا الجهاز فقط.</p></div></section>
+  </main>
+  <footer><div><a class="logo" href="#home" data-page="home">RASI<span>.</span></a><p>لبس يعبر عنك.<br>كل يوم، بطريقتك.</p><nav><a href="#shop" data-scroll="shop">تسوقي</a><a href="#story" data-scroll="story">عن RASI</a><button data-page="login">حسابي</button><button data-page="login">الإدارة</button></nav></div><small>© ٢٠٢٦ RASI · صنع بحب في مصر</small></footer>
+  <div class="backdrop" id="backdrop" hidden></div><aside class="cart" id="cart" aria-label="سلة التسوق"><header><div><p class="eyebrow">اختياراتك</p><h2>سلة التسوق <small id="cart-subcount">(٠)</small></h2></div><button id="cart-close" aria-label="إغلاق">×</button></header><div id="cart-items"></div><div id="cart-empty">لسه مفيش حاجة هنا.<button id="continue">ابدئي اختياراتك ←</button></div><div class="cart-bottom" id="cart-bottom" hidden><p>الإجمالي <strong id="cart-total"></strong></p><small>الشحن بيتحسب عند تأكيد الطلب.</small><button class="button dark" id="checkout">كملي الطلب ←</button></div></aside>
+  <dialog id="product-dialog"><button class="dialog-close" id="dialog-close" aria-label="إغلاق">×</button><div id="product-detail"></div></dialog>
+  <section class="chat"><div class="chat-panel" id="chat-panel" hidden><header><span>●</span><div><strong>فريق RASI</strong><small>عادة بنرد بسرعة</small></div><button id="chat-close">×</button></header><div class="messages" id="messages"><p class="staff">أهلاً بيكي في RASI! نقدر نساعدك في إيه؟</p><div class="quick"><button data-reply="عايزة أعرف حالة طلبي">حالة طلبي</button><button data-reply="ممكن أعرف سياسة الاستبدال؟">الاستبدال</button></div></div><form id="chat-form"><input id="chat-input" placeholder="اكتبي رسالتك..." aria-label="رسالتك"><button>إرسال</button></form></div><button class="chat-launch" id="chat-toggle">● محتاجة مساعدة؟ ↗</button></section>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
